@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cclxxamt3gxnv"
-path="res://.godot/imported/icon.svg-318367242a827b97fff7c01f629b8f0e.ctex"
+path="res://.godot/imported/icon.svg-0e9b1f9a4a827e54524c128511f96bce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game-Off-2024/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-318367242a827b97fff7c01f629b8f0e.ctex"]
+source_file="res://Game-Off-2024/random files/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-0e9b1f9a4a827e54524c128511f96bce.ctex"]
 
 [params]
 

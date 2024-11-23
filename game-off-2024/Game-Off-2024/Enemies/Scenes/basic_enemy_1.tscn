@@ -1,9 +1,9 @@
 [gd_scene load_steps=25 format=3 uid="uid://b85apkrrd5foj"]
 
-[ext_resource type="Script" path="res://Game-Off-2024/enemy_class.gd" id="1_ipq1s"]
+[ext_resource type="Script" path="res://Game-Off-2024/random files/enemy_class.gd" id="1_ipq1s"]
 [ext_resource type="PackedScene" uid="uid://c5tgk0k26x3b1" path="res://Game-Off-2024/Generic_StateMachine/state_machine.tscn" id="2_qwvhg"]
 [ext_resource type="PackedScene" uid="uid://w02jdn2ikxfd" path="res://Game-Off-2024/Enemies/Scenes/enemyIdle.tscn" id="3_f5jfp"]
-[ext_resource type="Script" path="res://Game-Off-2024/enemyAware.gd" id="4_mlok6"]
+[ext_resource type="Script" path="res://Game-Off-2024/random files/enemyAware.gd" id="4_mlok6"]
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/enemyAggressive.gd" id="5_eo7nh"]
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/enemyInspecting.gd" id="5_hfiel"]
 [ext_resource type="Texture2D" uid="uid://bglfxh442t4ic" path="res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png" id="6_434fe"]

@@ -9,8 +9,8 @@
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/TargetPOIArrival.gd" id="6_unrpn"]
 [ext_resource type="PackedScene" uid="uid://dq0k7eyogbqv2" path="res://Game-Off-2024/Enemies/Scenes/enemyDead.tscn" id="7_cjp75"]
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/area_2d.gd" id="8_fmiel"]
-[ext_resource type="PackedScene" uid="uid://dvvopnog574xr" path="res://Game-Off-2024/blood_splatter.tscn" id="8_mupe3"]
-[ext_resource type="Script" path="res://Game-Off-2024/enemyAware.gd" id="9_ncxci"]
+[ext_resource type="PackedScene" uid="uid://dvvopnog574xr" path="res://Game-Off-2024/random files/blood_splatter.tscn" id="8_mupe3"]
+[ext_resource type="Script" path="res://Game-Off-2024/random files/enemyAware.gd" id="9_ncxci"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ahs7g"]
 radius = 6.08276

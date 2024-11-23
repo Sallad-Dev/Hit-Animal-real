@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvvopnog574xr"]
 
 [ext_resource type="Texture2D" uid="uid://bglfxh442t4ic" path="res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png" id="1_0n2io"]
-[ext_resource type="Script" path="res://Game-Off-2024/blood_splatter.gd" id="2_wdaxe"]
+[ext_resource type="Script" path="res://Game-Off-2024/random files/blood_splatter.gd" id="2_wdaxe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_twipe"]
 atlas = ExtResource("1_0n2io")

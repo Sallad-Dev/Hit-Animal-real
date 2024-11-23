@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c32751tn225oy"]
 
-[ext_resource type="Script" path="res://Game-Off-2024/enemy_class.gd" id="1_qscw0"]
+[ext_resource type="Script" path="res://Game-Off-2024/random files/enemy_class.gd" id="1_qscw0"]
 
 
 [node name="EnemyClass" type="CharacterBody2D"]
