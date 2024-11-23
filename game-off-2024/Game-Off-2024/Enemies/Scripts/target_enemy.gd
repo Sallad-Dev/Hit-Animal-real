@@ -22,7 +22,6 @@ var current_poi_pos: Vector2
 var tween: Tween
 
 func _ready() -> void:
-	poi_survey()
 	#shallow copy of POI
 	poi_list = POI.duplicate()
 
@@ -35,10 +34,6 @@ func _physics_process(_delta: float) -> void:
 
 #take da damage
 func take_damage():
-	kill_enemy()
-
-#kill da enemy
-func kill_enemy():
 	EnemySignals.killEnemy.emit(self)
 
 #survey the area by rotating the enemies head

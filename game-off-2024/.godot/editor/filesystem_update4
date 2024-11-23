@@ -6,3 +6,6 @@ res://Game-Off-2024/Characters/Player/weapons/muzzle_flash.tscn
 res://Game-Off-2024/Charcaters/Player/scenes and scripts/agent_jet_stream.tscn
 res://Game-Off-2024/Charcaters/Player/weapons/muzzle_flash.tscn
 res://Game-Off-2024/Enemies/Scripts/target_enemy.gd
+res://Game-Off-2024/Enemies/Scripts/TargetPatrol.gd
+res://Game-Off-2024/Enemies/Scenes/raycastcontroller.gd
+res://Game-Off-2024/Enemies/Scenes/testing_label.gd
