@@ -1,9 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://gyb1vdehh0j8"]
+[gd_scene load_steps=21 format=3 uid="uid://gyb1vdehh0j8"]
 
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/target_enemy.gd" id="1_6mcgp"]
 [ext_resource type="Texture2D" uid="uid://bglfxh442t4ic" path="res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png" id="1_ft5hw"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/raycastcontroller.gd" id="3_2ywu0"]
 [ext_resource type="Script" path="res://Game-Off-2024/Generic_StateMachine/StateMachine.gd" id="3_aosis"]
-[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/enemyRaycasts.gd" id="3_jxq4r"]
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/TargetIdle.gd" id="4_vr5ia"]
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/TargetPatrol.gd" id="5_wsefd"]
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/TargetPOIArrival.gd" id="6_unrpn"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/area_2d.gd" id="8_fmiel"]
 [ext_resource type="PackedScene" uid="uid://dvvopnog574xr" path="res://Game-Off-2024/random files/blood_splatter.tscn" id="8_mupe3"]
 [ext_resource type="Script" path="res://Game-Off-2024/random files/enemyAware.gd" id="9_ncxci"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/testing_state.gd" id="11_ecnwi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ahs7g"]
 radius = 6.08276
@@ -100,26 +101,24 @@ autoplay = "idle"
 
 [node name="Raycasts" type="Node2D" parent="BodyParts/Head/headSprite"]
 position = Vector2(1, 0)
+script = ExtResource("3_2ywu0")
 
 [node name="Ray1" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
 target_position = Vector2(67, 0)
-script = ExtResource("3_jxq4r")
 
 [node name="Ray2" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
 target_position = Vector2(66, 9)
-script = ExtResource("3_jxq4r")
 
 [node name="Ray3" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
 target_position = Vector2(66, -9)
-script = ExtResource("3_jxq4r")
 
 [node name="Ray4" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
 target_position = Vector2(62, -18)
-script = ExtResource("3_jxq4r")
 
 [node name="Ray5" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
 target_position = Vector2(62, 18)
-script = ExtResource("3_jxq4r")
+
+[node name="SightTimer" type="Timer" parent="BodyParts/Head/headSprite/Raycasts"]
 
 [node name="Weapon" type="Node2D" parent="BodyParts"]
 z_index = -5
@@ -144,6 +143,9 @@ blood_particle = ExtResource("8_mupe3")
 [node name="Aware" type="Node" parent="Behaviours"]
 script = ExtResource("9_ncxci")
 
+[node name="TestingState" type="Node" parent="Behaviours"]
+script = ExtResource("11_ecnwi")
+
 [node name="HurtBox" type="Area2D" parent="."]
 script = ExtResource("8_fmiel")
 
@@ -151,3 +153,5 @@ script = ExtResource("8_fmiel")
 visible = false
 shape = SubResource("CircleShape2D_jf5bm")
 debug_color = Color(0.888531, 0.304915, 0.320457, 0.42)
+
+[connection signal="timeout" from="BodyParts/Head/headSprite/Raycasts/SightTimer" to="BodyParts/Head/headSprite/Raycasts" method="_on_sight_timer_timeout"]

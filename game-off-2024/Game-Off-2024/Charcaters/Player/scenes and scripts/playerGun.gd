@@ -6,6 +6,7 @@ extends Node2D
 @onready var shot_timer: Timer = $ShotTimer
 @onready var gun_sound: AudioStreamPlayer = $GunSound
 @onready var emission_point: Node2D = $"Emission Point"
+@onready var gun_ray: RayCast2D = $GunRay
 
 var mouse_pos
 @export_group("Gun Stuff")
@@ -28,27 +29,19 @@ func _process(_delta):
 		gun_sprite.play("idle")
 
 
-#generic shooting func
+#shoota da gun
 func shoot_gun():
 	if shot_timer.is_stopped():
-		create_muzzle_flash(emission_point.global_position)
-		var target_dist = (mouse_pos - global_position).normalized()*range_bullet
-		#raycast shenanigans
-		var space_state = get_world_2d().direct_space_state
-		# use global coordinates, not local to node
-		var query = PhysicsRayQueryParameters2D.create(owner.global_position, target_dist)
-		#make the raycast collide with hurtboxes
-		query.set_collide_with_areas(true)
-		var result = space_state.intersect_ray(query)
-		var pos = result.position
-		
 		gun_sound.play(0.0)
-		if result:
-			create_hit_particle(pos)
-			var obj = result.collider
+		create_muzzle_flash(emission_point.global_position)
+		create_hit_particle(gun_ray.get_collision_point())
+		if gun_ray.is_colliding():
+			var obj = gun_ray.get_collider()
 			if obj.has_method("take_damage"):
 				obj.take_damage()
+		
 		shot_timer.start(fire_rate)
+
 
 func create_hit_particle(location: Vector2):
 	var p = hit_particle.instantiate()

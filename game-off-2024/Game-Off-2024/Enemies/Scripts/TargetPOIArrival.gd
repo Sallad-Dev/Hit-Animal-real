@@ -32,6 +32,7 @@ func on_enemy_dies(enemy):
 
 func on_enemy_finished(enemy):
 	if enemy == owner:
+		owner.set_next_poi()
 		transitioned.emit("Patrol")
 
 func on_player_sighted(player):
