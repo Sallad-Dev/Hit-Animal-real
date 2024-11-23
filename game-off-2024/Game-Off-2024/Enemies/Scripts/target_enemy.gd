@@ -22,7 +22,7 @@ var current_poi_pos: Vector2
 var tween: Tween
 
 func _ready() -> void:
-	
+	poi_survey()
 	#shallow copy of POI
 	poi_list = POI.duplicate()
 
@@ -30,8 +30,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func _physics_process(_delta: float) -> void:
-	
-	
+
 	move_and_slide()
 
 #take da damage
