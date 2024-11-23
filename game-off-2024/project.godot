@@ -43,7 +43,9 @@ folder_colors={
 "res://Game-Off-2024/Charcaters/": "red",
 "res://Game-Off-2024/Enemies/": "yellow",
 "res://Game-Off-2024/Generic_StateMachine/": "green",
-"res://Game-Off-2024/Globals/": "purple"
+"res://Game-Off-2024/Globals/": "purple",
+"res://Game-Off-2024/UI/": "pink",
+"res://UI/": "pink"
 }
 
 [global_group]

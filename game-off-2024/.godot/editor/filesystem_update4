@@ -1,1 +1,6 @@
 res://Game-Off-2024/TestWorlds/test_world_gamers.tscn
+res://UI/menu.tscn
+res://Game-Off-2024/UI/menu.tscn
+res://Game-Off-2024/UI/options_menu.tscn
+res://Game-Off-2024/UI/menu.gd
+res://Game-Off-2024/UI/optionsmenu.gd

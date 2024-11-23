@@ -1,0 +1,224 @@
+[gd_scene load_steps=21 format=3 uid="uid://c4dkhiecyjt5l"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/UI/menu.gd" id="1_587f7"]
+[ext_resource type="Texture2D" uid="uid://bm7ej5ncexoic" path="res://Game-Off-2024/UI/Images/second menu background hitanimal.png" id="2_kqpba"]
+[ext_resource type="Texture2D" uid="uid://b1v67gf1goci6" path="res://Game-Off-2024/UI/Images/HITANIMAL menu icon.png" id="3_cqbdm"]
+[ext_resource type="Texture2D" uid="uid://8m676u04h7c6" path="res://Game-Off-2024/UI/Images/wing cursor.png" id="4_e65u6"]
+[ext_resource type="Script" path="res://Game-Off-2024/UI/menu_cursor.gd" id="5_7sq2s"]
+[ext_resource type="AudioStream" uid="uid://bedr4qrkcxqqu" path="res://Game-Off-2024/UI/Sounds/meaty-gunshot-101257.mp3" id="6_28uuk"]
+[ext_resource type="Texture2D" uid="uid://w0g71dni4es7" path="res://Game-Off-2024/UI/Images/DEV title.png" id="7_bw30e"]
+[ext_resource type="AudioStream" uid="uid://8n0x5gkechmh" path="res://Game-Off-2024/UI/Sounds/bgmusic.mp3" id="8_10a3e"]
+[ext_resource type="AudioStream" uid="uid://b1kb70sku8kvu" path="res://Game-Off-2024/UI/Sounds/explosive-glass-shattering-09-190267.mp3" id="9_hbqnb"]
+
+[sub_resource type="Curve" id="Curve_kxsd5"]
+_data = [Vector2(0.0234375, 1), 0.0, 0.0, 0, 0, Vector2(0.769531, 0.311889), 0.0, 0.0, 0, 0, Vector2(0.980469, 0.00488591), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_l2b1e"]
+curve = SubResource("Curve_kxsd5")
+
+[sub_resource type="Gradient" id="Gradient_vkq7q"]
+offsets = PackedFloat32Array(0.491228, 0.644737)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_oak0q"]
+gradient = SubResource("Gradient_vkq7q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4ri5m"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(600, 100, 1)
+gravity = Vector3(40, 98, 0)
+scale_max = 3.0
+color_initial_ramp = SubResource("GradientTexture1D_oak0q")
+alpha_curve = SubResource("CurveTexture_l2b1e")
+turbulence_enabled = true
+turbulence_noise_speed_random = 0.0
+turbulence_influence_min = 0.02
+turbulence_influence_max = 0.08
+
+[sub_resource type="SystemFont" id="SystemFont_q13sq"]
+font_names = PackedStringArray("VCR OSD Mono")
+force_autohinter = true
+hinting = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6j1jv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="SystemFont" id="SystemFont_r8bam"]
+font_names = PackedStringArray("VCR OSD Mono")
+force_autohinter = true
+hinting = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ikuga"]
+
+[sub_resource type="SystemFont" id="SystemFont_ibqb0"]
+font_names = PackedStringArray("VCR OSD Mono")
+force_autohinter = true
+hinting = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3uv0"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_587f7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kqpba")
+
+[node name="Snow" type="GPUParticles2D" parent="."]
+position = Vector2(300, 1)
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_4ri5m")
+lifetime = 10.0
+preprocess = 30.0
+visibility_rect = Rect2(-100, -100, 400, 300)
+
+[node name="HITANIMAL_title" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -110.5
+offset_right = 97.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_cqbdm")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 281.0
+offset_top = 206.0
+offset_right = 867.0
+offset_bottom = 510.0
+scale = Vector2(0.2, 0.2)
+theme_override_constants/separation = 20
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_focus_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_q13sq")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_6j1jv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6j1jv")
+text = "START GAME"
+alignment = 0
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_focus_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_r8bam")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ikuga")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ikuga")
+text = "OPTIONS"
+alignment = 0
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_focus_color = Color(0.996078, 0.811765, 0.32549, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ibqb0")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_l3uv0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l3uv0")
+text = "CLOSE"
+alignment = 0
+
+[node name="menu_cursor" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 16.0
+texture = ExtResource("4_e65u6")
+script = ExtResource("5_7sq2s")
+menu_parent_path = NodePath("../VBoxContainer")
+cursor_offset = Vector2(-250, -6)
+
+[node name="cursorsound" type="AudioStreamPlayer2D" parent="menu_cursor"]
+stream = ExtResource("6_28uuk")
+volume_db = -14.076
+pitch_scale = 1.38
+
+[node name="devline" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 253.0
+offset_top = 341.0
+offset_right = 485.0
+offset_bottom = 355.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_bw30e")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="MenuBGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_10a3e")
+volume_db = -5.924
+autoplay = true
+parameters/looping = true
+
+[node name="confirmsound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(157.7, 142)
+scale = Vector2(0.2, 0.2)
+stream = ExtResource("9_hbqnb")
+volume_db = -10.0
+pitch_scale = 1.55
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

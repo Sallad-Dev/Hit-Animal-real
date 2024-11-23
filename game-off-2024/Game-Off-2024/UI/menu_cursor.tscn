@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlnna6moumsmb"]
+
+[ext_resource type="Texture2D" uid="uid://8m676u04h7c6" path="res://Images/wing cursor.png" id="1_syhtr"]
+[ext_resource type="Script" path="res://Assets/menu_cursor.gd" id="2_rn6vd"]
+
+[node name="menu_cursor" type="TextureRect"]
+offset_right = 32.0
+offset_bottom = 16.0
+texture = ExtResource("1_syhtr")
+script = ExtResource("2_rn6vd")

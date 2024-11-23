@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwha4jrrqb4oq"]
+
+[ext_resource type="Texture2D" uid="uid://b508viv3ch7ia" path="res://Images/wing cursor-Sheet.png" id="1_bt3ij"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_panap"]
+atlas = ExtResource("1_bt3ij")
+region = Rect2(0, 0, 36, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxife"]
+atlas = ExtResource("1_bt3ij")
+region = Rect2(36, 0, 36, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7djl"]
+atlas = ExtResource("1_bt3ij")
+region = Rect2(72, 0, 36, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lp88"]
+atlas = ExtResource("1_bt3ij")
+region = Rect2(108, 0, 36, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phv71"]
+atlas = ExtResource("1_bt3ij")
+region = Rect2(144, 0, 36, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6y05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_panap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxife")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7djl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lp88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phv71")
+}],
+"loop": true,
+"name": &"cursor animation",
+"speed": 5.0
+}]
+
+[node name="menucursoranim" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_y6y05")
+animation = &"cursor animation"

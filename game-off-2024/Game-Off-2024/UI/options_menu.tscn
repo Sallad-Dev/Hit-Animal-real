@@ -1,0 +1,187 @@
+[gd_scene load_steps=15 format=3 uid="uid://c4x11xp0ovw4k"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/UI/optionsmenu.gd" id="1_v5dkl"]
+[ext_resource type="Texture2D" uid="uid://bm7ej5ncexoic" path="res://Game-Off-2024/UI/Images/second menu background hitanimal.png" id="2_5p42f"]
+[ext_resource type="AudioStream" uid="uid://8n0x5gkechmh" path="res://Game-Off-2024/UI/Sounds/bgmusic.mp3" id="3_e6edi"]
+[ext_resource type="Script" path="res://Game-Off-2024/UI/volume.gd" id="4_iegn8"]
+[ext_resource type="Texture2D" uid="uid://cmmuhbne1j56o" path="res://Game-Off-2024/UI/Images/bullet cursor.png" id="4_nup0w"]
+
+[sub_resource type="Curve" id="Curve_kxsd5"]
+_data = [Vector2(0.0234375, 1), 0.0, 0.0, 0, 0, Vector2(0.769531, 0.311889), 0.0, 0.0, 0, 0, Vector2(0.980469, 0.00488591), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_l2b1e"]
+curve = SubResource("Curve_kxsd5")
+
+[sub_resource type="Gradient" id="Gradient_vkq7q"]
+offsets = PackedFloat32Array(0.491228, 0.644737)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_oak0q"]
+gradient = SubResource("Gradient_vkq7q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4ri5m"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(300, 1, 1)
+gravity = Vector3(40, 98, 0)
+scale_max = 3.0
+color_initial_ramp = SubResource("GradientTexture1D_oak0q")
+alpha_curve = SubResource("CurveTexture_l2b1e")
+turbulence_enabled = true
+turbulence_noise_speed_random = 0.0
+turbulence_influence_min = 0.02
+turbulence_influence_max = 0.08
+
+[sub_resource type="SystemFont" id="SystemFont_w24m7"]
+font_names = PackedStringArray("VCR OSD Mono")
+force_autohinter = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lpjuu"]
+
+[sub_resource type="SystemFont" id="SystemFont_f1lt8"]
+font_names = PackedStringArray("VCR OSD Mono")
+force_autohinter = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bd0pk"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v5dkl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5p42f")
+
+[node name="Snow" type="GPUParticles2D" parent="."]
+position = Vector2(200, 0)
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_4ri5m")
+lifetime = 10.0
+preprocess = 30.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 280.0
+offset_top = 21.0
+offset_right = 632.0
+offset_bottom = 217.0
+scale = Vector2(0.2, 0.2)
+theme_override_constants/separation = 57
+
+[node name="Volume" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_focus_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_w24m7")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lpjuu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lpjuu")
+text = "Volume"
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_focus_color = Color(1, 0.815686, 0.32549, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_f1lt8")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_bd0pk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bd0pk")
+text = "Back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_e6edi")
+volume_db = -5.924
+autoplay = true
+parameters/looping = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 102.0
+offset_right = 1005.0
+offset_bottom = 662.0
+scale = Vector2(0.2, 0.2)
+theme_override_constants/separation = 60
+
+[node name="Master" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_w24m7")
+theme_override_font_sizes/font_size = 100
+text = "Master"
+uppercase = true
+
+[node name="master" type="HSlider" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_icons/grabber = ExtResource("4_nup0w")
+theme_override_icons/grabber_highlight = ExtResource("4_nup0w")
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_iegn8")
+bus_name = "Master"
+
+[node name="Music" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_w24m7")
+theme_override_font_sizes/font_size = 100
+text = "Music"
+uppercase = true
+
+[node name="music" type="HSlider" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("4_nup0w")
+theme_override_icons/grabber_highlight = ExtResource("4_nup0w")
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_iegn8")
+bus_name = "music"
+
+[node name="Sound Effects" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_w24m7")
+theme_override_font_sizes/font_size = 100
+text = "Sound Effects"
+uppercase = true
+
+[node name="sfx" type="HSlider" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("4_nup0w")
+theme_override_icons/grabber_highlight = ExtResource("4_nup0w")
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_iegn8")
+bus_name = "sfx"
+
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
