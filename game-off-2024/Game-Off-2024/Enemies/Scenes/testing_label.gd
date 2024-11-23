@@ -1,6 +1,9 @@
 extends Label
 
-@onready var behaviours: StateMachine = $"../Behaviours"
+
+@onready var behaviours: StateMachine = $"../TargetEnemy/Behaviours"
+
+
 
 
 func _process(delta: float) -> void:

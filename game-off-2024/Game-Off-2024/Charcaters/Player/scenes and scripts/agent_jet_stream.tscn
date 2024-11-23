@@ -135,6 +135,9 @@ stream = ExtResource("10_qbjfq")
 [node name="Emission Point" type="Node2D" parent="Gun"]
 position = Vector2(16, -2)
 
+[node name="GunRay" type="RayCast2D" parent="Gun"]
+target_position = Vector2(250, 0)
+
 [node name="Head" type="Node2D" parent="."]
 script = ExtResource("7_ppv3f")
 

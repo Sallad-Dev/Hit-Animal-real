@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/area_2d.gd" id="8_fmiel"]
 [ext_resource type="PackedScene" uid="uid://dvvopnog574xr" path="res://Game-Off-2024/random files/blood_splatter.tscn" id="8_mupe3"]
 [ext_resource type="Script" path="res://Game-Off-2024/random files/enemyAware.gd" id="9_ncxci"]
-[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/testing_label.gd" id="12_anfyu"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/testing_state.gd" id="11_ecnwi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ahs7g"]
 radius = 6.08276
@@ -143,6 +143,9 @@ blood_particle = ExtResource("8_mupe3")
 [node name="Aware" type="Node" parent="Behaviours"]
 script = ExtResource("9_ncxci")
 
+[node name="TestingState" type="Node" parent="Behaviours"]
+script = ExtResource("11_ecnwi")
+
 [node name="HurtBox" type="Area2D" parent="."]
 script = ExtResource("8_fmiel")
 
@@ -150,11 +153,5 @@ script = ExtResource("8_fmiel")
 visible = false
 shape = SubResource("CircleShape2D_jf5bm")
 debug_color = Color(0.888531, 0.304915, 0.320457, 0.42)
-
-[node name="testing label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_font_sizes/font_size = 0
-script = ExtResource("12_anfyu")
 
 [connection signal="timeout" from="BodyParts/Head/headSprite/Raycasts/SightTimer" to="BodyParts/Head/headSprite/Raycasts" method="_on_sight_timer_timeout"]

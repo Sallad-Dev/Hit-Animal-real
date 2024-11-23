@@ -18,17 +18,17 @@ func Enter():
 	
 func Physics_update(delta: float) -> void:
 	var dist_from_point = (owner.last_known_player_pos - owner.global_position).length()
-	if dist_from_point <= 4:
+	if dist_from_point <= 8:
 		owner.velocity = Vector2.ZERO
-		await get_tree().create_timer(1).timeout
 		transitioned.emit("Patrol")
 	else:
 		owner.velocity = (owner.last_known_player_pos - owner.global_position).normalized()*owner.speed*delta
 	owner.look_at(owner.last_known_player_pos)
 	
 func on_player_out_of_sight():
-	%Patrol.add_new_poi_front(%Patrol.get_current_poi())
-	transitioned.emit("Patrol")
+	#
+	#transitioned.emit("Patrol")
+	pass
 
 func on_player_sighted(player):
 	owner.last_known_player_pos = player.global_position

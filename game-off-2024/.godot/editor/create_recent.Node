@@ -1,8 +1,10 @@
-Label
-Timer
 RayCast2D
-Node2D
+State
 Node
+Label
+Control
+Timer
+Node2D
 CPUParticles2D
 CollisionShape2D
 Area2D
@@ -10,6 +12,3 @@ AnimatedSprite2D
 Gun
 Sprite2D
 Bullet
-POIKillEnemy
-PointOfInterest
-POISurvey

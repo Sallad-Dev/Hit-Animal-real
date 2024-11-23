@@ -25,6 +25,10 @@ func _ready() -> void:
 	#shallow copy of POI
 	poi_list = POI.duplicate()
 
+	if poi_list.is_empty():
+		reset_poi_list()
+	set_next_poi()
+
 func _process(_delta: float) -> void:
 	pass
 
@@ -50,3 +54,29 @@ func poi_survey():
 		return
 	await tween.finished
 	EnemySignals.enemyArrivalFinsihed.emit(self)
+
+
+# POI setters and getters
+func get_poi_list():
+	return poi_list
+
+func reset_poi_list():
+	poi_list = POI.duplicate()
+
+func get_current_poi():
+	return current_poi
+
+func set_next_poi():
+	current_poi = poi_list.pop_front()
+
+func set_current_poi(poi: PointOfInterest):
+	current_poi = poi
+
+func add_new_poi_front(poi: PointOfInterest):
+	poi_list.push_front(poi)
+
+func get_current_poi_pos():
+	return current_poi.global_position
+
+func set_current_poi_pos(vect:Vector2):
+	current_poi_pos = vect
