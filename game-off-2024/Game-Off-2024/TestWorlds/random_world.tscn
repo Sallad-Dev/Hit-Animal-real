@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://duw3k6xv5306m"]
+
+[ext_resource type="PackedScene" uid="uid://1c86vg4ft60v" path="res://Game-Off-2024/Charcaters/Player/scenes and scripts/agent_jet_stream.tscn" id="1_etsv6"]
+
+[node name="Node" type="Node"]
+
+[node name="AgentJetStream" parent="." instance=ExtResource("1_etsv6")]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://uo35sptxivld"]
+
+[ext_resource type="Texture2D" uid="uid://cowwdnd2qn1bd" path="res://Game-Off-2024/Assets/player art/hitanimalhead.png" id="1_1npb6"]
+
+[sub_resource type="GDScript" id="GDScript_gv2m4"]
+script/source = "extends CharacterBody2D
+
+## this is all placeholder, movement will be so much more swag
+@export var SPEED = 300.0
+
+
+
+func _physics_process(delta: float) -> void:
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var x_direction := Input.get_axis(\"move_left\", \"move_right\")
+	var y_direction := Input.get_axis(\"move_up\", \"move_down\")
+	
+	if x_direction:
+		velocity.x = x_direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if y_direction:
+		velocity.y = y_direction * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+
+	move_and_slide()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5ua4"]
+
+[node name="Base Level Scene" type="Node"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(575, 285)
+script = SubResource("GDScript_gv2m4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_v5ua4")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_1npb6")

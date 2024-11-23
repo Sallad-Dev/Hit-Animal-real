@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b157sh7tvn4di"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/weapons/generic_gun.gd" id="1_rcecn"]
+
+[sub_resource type="PackedScene" id="PackedScene_5bksd"]
+
+[node name="GenericGun" type="Node2D"]
+script = ExtResource("1_rcecn")
+bullet = SubResource("PackedScene_5bksd")

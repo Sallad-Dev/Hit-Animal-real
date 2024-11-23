@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://be2ygnu5ohfwv"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/weapons/generic_gun.gd" id="1_x1xfy"]
+[ext_resource type="PackedScene" uid="uid://bjhunyu8oeda0" path="res://Game-Off-2024/Charcaters/Player/weapons/basic_bullet.tscn" id="2_tve8t"]
+[ext_resource type="Texture2D" uid="uid://bglfxh442t4ic" path="res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png" id="3_yn2g1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni0m5"]
+atlas = ExtResource("3_yn2g1")
+region = Rect2(49, 3, 24, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8y5ex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni0m5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="AR15Gun" type="Node2D"]
+script = ExtResource("1_x1xfy")
+bullet = ExtResource("2_tve8t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -5)
+sprite_frames = SubResource("SpriteFrames_8y5ex")
+animation = &"idle"
+autoplay = "idle"
+flip_v = true

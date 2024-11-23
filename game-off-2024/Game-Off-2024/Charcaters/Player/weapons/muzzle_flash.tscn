@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5554hioeef3d"]
+
+[ext_resource type="Texture2D" uid="uid://c4i2ja4ueomkq" path="res://Game-Off-2024/Assets/Characters/MuzzleFlash01-Sheet.png" id="1_imsgu"]
+[ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/weapons/muzzle_flash.gd" id="2_fx73t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhr0q"]
+atlas = ExtResource("1_imsgu")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="Curve" id="Curve_pwdk0"]
+max_value = 2.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0967742, 1.34066), 0.0, 0.0, 0, 0, Vector2(0.467742, 0.989011), 0.0, 0.0, 0, 0, Vector2(0.967742, 0.395604), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_0o0a6"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.114583, 0.364583, 0.479167)
+colors = PackedColorArray(1, 0.84, 0.84, 1, 1, 0.54, 0.54, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_avc2m"]
+max_value = 200.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.491935, 197.802), 0.0, 0.0, 0, 0, Vector2(0.887097, 147.253), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="MuzzleFlash" type="CPUParticles2D"]
+amount = 1
+lifetime = 0.2
+local_coords = true
+texture = SubResource("AtlasTexture_mhr0q")
+gravity = Vector2(0, 0)
+scale_amount_curve = SubResource("Curve_pwdk0")
+color_ramp = SubResource("Gradient_0o0a6")
+anim_speed_curve = SubResource("Curve_avc2m")
+script = ExtResource("2_fx73t")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

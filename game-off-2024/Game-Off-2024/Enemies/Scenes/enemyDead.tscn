@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq0k7eyogbqv2"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/enemyDead.gd" id="1_vm3ke"]
+
+[node name="Dead" type="Node"]
+script = ExtResource("1_vm3ke")

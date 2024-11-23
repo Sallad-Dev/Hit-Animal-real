@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhqil5tcccvew"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/weapons/hit_particle.gd" id="1_guxta"]
+
+[node name="HitParticle" type="CPUParticles2D"]
+z_index = 50
+emitting = false
+lifetime = 0.05
+one_shot = true
+explosiveness = 0.69
+randomness = 1.0
+lifetime_randomness = 1.0
+spread = 80.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 300.0
+initial_velocity_max = 300.0
+color = Color(1, 0.9705, 0.41, 1)
+script = ExtResource("1_guxta")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

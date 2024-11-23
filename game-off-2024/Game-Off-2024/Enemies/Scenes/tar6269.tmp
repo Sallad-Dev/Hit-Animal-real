@@ -1,0 +1,152 @@
+[gd_scene load_steps=20 format=3 uid="uid://gyb1vdehh0j8"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/target_enemy.gd" id="1_6mcgp"]
+[ext_resource type="Texture2D" uid="uid://bglfxh442t4ic" path="res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png" id="1_ft5hw"]
+[ext_resource type="Script" path="res://Game-Off-2024/Generic_StateMachine/StateMachine.gd" id="3_aosis"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/enemyRaycasts.gd" id="3_jxq4r"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/TargetIdle.gd" id="4_vr5ia"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/TargetPatrol.gd" id="5_wsefd"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/TargetPOIArrival.gd" id="6_unrpn"]
+[ext_resource type="PackedScene" uid="uid://dq0k7eyogbqv2" path="res://Game-Off-2024/Enemies/Scenes/enemyDead.tscn" id="7_cjp75"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scenes/area_2d.gd" id="8_fmiel"]
+[ext_resource type="PackedScene" uid="uid://dvvopnog574xr" path="res://Game-Off-2024/blood_splatter.tscn" id="8_mupe3"]
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/enemyAware.gd" id="9_ncxci"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ahs7g"]
+radius = 6.08276
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkgor"]
+atlas = ExtResource("1_ft5hw")
+region = Rect2(144, 96, 25, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyxy6"]
+atlas = ExtResource("1_ft5hw")
+region = Rect2(18, 113, 12, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d67l5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkgor")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyxy6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxd1c"]
+atlas = ExtResource("1_ft5hw")
+region = Rect2(132, 144, 44, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7qfe"]
+atlas = ExtResource("1_ft5hw")
+region = Rect2(34, 98, 10, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w2hks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxd1c")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7qfe")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jf5bm"]
+
+[node name="TargetEnemy" type="CharacterBody2D"]
+collision_layer = 3
+safe_margin = 1.0
+script = ExtResource("1_6mcgp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_ahs7g")
+
+[node name="BodyParts" type="Node2D" parent="."]
+
+[node name="Body" type="Node2D" parent="BodyParts"]
+z_index = -15
+
+[node name="bodySprite" type="AnimatedSprite2D" parent="BodyParts/Body"]
+sprite_frames = SubResource("SpriteFrames_d67l5")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Head" type="Node2D" parent="BodyParts"]
+
+[node name="headSprite" type="AnimatedSprite2D" parent="BodyParts/Head"]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_w2hks")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Raycasts" type="Node2D" parent="BodyParts/Head/headSprite"]
+position = Vector2(1, 0)
+
+[node name="Ray1" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
+target_position = Vector2(67, 0)
+script = ExtResource("3_jxq4r")
+
+[node name="Ray2" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
+target_position = Vector2(66, 9)
+script = ExtResource("3_jxq4r")
+
+[node name="Ray3" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
+target_position = Vector2(66, -9)
+script = ExtResource("3_jxq4r")
+
+[node name="Ray4" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
+target_position = Vector2(62, -18)
+script = ExtResource("3_jxq4r")
+
+[node name="Ray5" type="RayCast2D" parent="BodyParts/Head/headSprite/Raycasts"]
+target_position = Vector2(62, 18)
+script = ExtResource("3_jxq4r")
+
+[node name="Weapon" type="Node2D" parent="BodyParts"]
+z_index = -5
+
+[node name="Behaviours" type="Node" parent="." node_paths=PackedStringArray("current_state")]
+script = ExtResource("3_aosis")
+current_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="Behaviours"]
+script = ExtResource("4_vr5ia")
+
+[node name="Patrol" type="Node" parent="Behaviours"]
+script = ExtResource("5_wsefd")
+
+[node name="POIArrival" type="Node" parent="Behaviours"]
+script = ExtResource("6_unrpn")
+
+[node name="Dead" parent="Behaviours" instance=ExtResource("7_cjp75")]
+blood_particle = ExtResource("8_mupe3")
+
+[node name="Aware" type="Node" parent="Behaviours"]
+script = ExtResource("9_ncxci")
+
+[node name="HurtBox" type="Area2D" parent="."]
+script = ExtResource("8_fmiel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+visible = false
+shape = SubResource("CircleShape2D_jf5bm")
+debug_color = Color(0.888531, 0.304915, 0.320457, 0.42)

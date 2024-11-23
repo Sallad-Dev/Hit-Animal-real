@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://w02jdn2ikxfd"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/enemyIdle.gd" id="1_av72d"]
+
+[node name="Idle" type="Node"]
+script = ExtResource("1_av72d")
+
+[node name="idleTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="idleTimer" to="." method="_on_idle_timer_timeout"]

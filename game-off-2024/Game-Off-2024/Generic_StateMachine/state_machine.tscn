@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5tgk0k26x3b1"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Generic_StateMachine/StateMachine.gd" id="1_o2l7w"]
+
+[node name="StateMachine" type="Node"]
+script = ExtResource("1_o2l7w")

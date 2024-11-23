@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjhunyu8oeda0"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/weapons/generic_bullet.gd" id="1_7bv6k"]
+[ext_resource type="Texture2D" uid="uid://bglfxh442t4ic" path="res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png" id="2_o7bji"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ildrf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mww4k"]
+atlas = ExtResource("2_o7bji")
+region = Rect2(32, 16, 16, 16)
+
+[node name="BasicBullet" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_7bv6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ildrf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_mww4k")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu4an88485cux"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/points_of_interest.gd" id="1_a1fcx"]
+
+[node name="Points of Interest" type="Node2D"]
+script = ExtResource("1_a1fcx")
