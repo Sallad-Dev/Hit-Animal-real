@@ -25,7 +25,7 @@ func Update(_delta: float) -> void:
 
 func Physics_update(delta: float) -> void:
 	var poi_to_target = owner.get_current_poi_pos()-owner.global_position
-	owner.velocity = poi_to_target.normalized()*owner.speed*delta
+	owner.velocity = poi_to_target.normalized() * owner.speed * delta
 	
 	if poi_to_target.length() <= 16:
 		transitioned.emit("POIArrival")

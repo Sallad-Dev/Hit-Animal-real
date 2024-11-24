@@ -1,11 +1,11 @@
 extends CharacterBody2D
-class_name TargetEnemy
+class_name Enemy
 
 ##TODO enemy object avoidance.
 
 @export_group("Stats")
-@export var health = 100
-@export var speed = 500
+@export var health := 100
+@export var speed := 500
 
 
 @export_group("Points of interest")

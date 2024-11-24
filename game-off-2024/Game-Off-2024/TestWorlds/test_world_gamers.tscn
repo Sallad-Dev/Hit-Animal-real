@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqmxwja817poa" path="res://Game-Off-2024/Assets/Tilesets/hit_animal_tile_map.png" id="2_dgb75"]
 [ext_resource type="PackedScene" uid="uid://1c86vg4ft60v" path="res://Game-Off-2024/Charcaters/Player/scenes and scripts/agent_jet_stream.tscn" id="2_f23it"]
 [ext_resource type="Script" path="res://Game-Off-2024/Enemies/Scripts/poiSurvey.gd" id="3_18v7l"]
-[ext_resource type="PackedScene" uid="uid://gyb1vdehh0j8" path="res://Game-Off-2024/Enemies/Scenes/target_enemy.tscn" id="4_x7kss"]
+[ext_resource type="PackedScene" uid="uid://gyb1vdehh0j8" path="res://Game-Off-2024/Enemies/Scenes/enemy.tscn" id="4_x7kss"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y7i0l"]
 texture = ExtResource("2_dgb75")
@@ -141,7 +141,7 @@ script = ExtResource("3_18v7l")
 position = Vector2(57, -23)
 script = ExtResource("3_18v7l")
 
-[node name="TargetEnemy" parent="." node_paths=PackedStringArray("POI") instance=ExtResource("4_x7kss")]
-position = Vector2(-23, -25)
-speed = 1250
+[node name="Enemy" parent="." node_paths=PackedStringArray("POI") instance=ExtResource("4_x7kss")]
+position = Vector2(7, -28)
+health = 200
 POI = [NodePath("../POIs/POISurvey"), NodePath("../POIs/POISurvey2"), NodePath("../POIs/POISurvey3")]
