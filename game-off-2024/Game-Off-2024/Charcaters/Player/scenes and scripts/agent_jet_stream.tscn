@@ -1,12 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://1c86vg4ft60v"]
+[gd_scene load_steps=21 format=3 uid="uid://1c86vg4ft60v"]
 
 [ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/scenes and scripts/AgentJetStream.gd" id="1_8lg8a"]
 [ext_resource type="Texture2D" uid="uid://cwueym0jpxjme" path="res://Game-Off-2024/Assets/player art/jetstreambodysprites.png" id="2_1q581"]
 [ext_resource type="Texture2D" uid="uid://bvotx6ogk5d3t" path="res://Game-Off-2024/Assets/player art/cursor.png" id="4_hfm8t"]
 [ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/scenes and scripts/cursor.gd" id="4_iy3dd"]
-[ext_resource type="PackedScene" uid="uid://dd8iqukqhhqj0" path="res://Game-Off-2024/Charcaters/Player/weapons/gun.tscn" id="6_l0onm"]
 [ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerBody.gd" id="6_r3q76"]
+[ext_resource type="PackedScene" uid="uid://bhqil5tcccvew" path="res://Game-Off-2024/Charcaters/Player/weapons/hit_particle.tscn" id="7_nhse0"]
 [ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerHead.gd" id="7_ppv3f"]
+[ext_resource type="PackedScene" uid="uid://b5554hioeef3d" path="res://Game-Off-2024/Charcaters/Player/weapons/muzzle_flash.tscn" id="8_2urbp"]
+[ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerGun.gd" id="8_h0ye3"]
+[ext_resource type="Texture2D" uid="uid://bglfxh442t4ic" path="res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png" id="8_rokha"]
+[ext_resource type="AudioStream" uid="uid://dx4ldchyg56q5" path="res://Game-Off-2024/Assets/Sounds/gun_sound.mp3" id="10_qbjfq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o2cq6"]
 radius = 6.0
@@ -32,6 +36,33 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t04a5")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpewc"]
+atlas = ExtResource("8_rokha")
+region = Rect2(145, 183, 24, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pccn6"]
+atlas = ExtResource("8_rokha")
+region = Rect2(49, 3, 24, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3ebx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpewc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pccn6")
 }],
 "loop": true,
 "name": &"shoot",
@@ -82,7 +113,30 @@ sprite_frames = SubResource("SpriteFrames_uixrd")
 animation = &"shoot"
 autoplay = "idle"
 
-[node name="Gun" parent="." instance=ExtResource("6_l0onm")]
+[node name="Gun" type="Node2D" parent="."]
+script = ExtResource("8_h0ye3")
+fire_rate = 0.1
+hit_particle = ExtResource("7_nhse0")
+muzzle_flash = ExtResource("8_2urbp")
+
+[node name="gunSprite" type="AnimatedSprite2D" parent="Gun"]
+position = Vector2(4, -4)
+sprite_frames = SubResource("SpriteFrames_g3ebx")
+animation = &"shoot"
+autoplay = "idle"
+flip_v = true
+
+[node name="ShotTimer" type="Timer" parent="Gun"]
+one_shot = true
+
+[node name="GunSound" type="AudioStreamPlayer" parent="Gun"]
+stream = ExtResource("10_qbjfq")
+
+[node name="Emission Point" type="Node2D" parent="Gun"]
+position = Vector2(16, -2)
+
+[node name="GunRay" type="RayCast2D" parent="Gun"]
+target_position = Vector2(250, 0)
 
 [node name="Head" type="Node2D" parent="."]
 script = ExtResource("7_ppv3f")
