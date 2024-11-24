@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dd8iqukqhhqj0"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerGun.gd" id="1_loifk"]
+[ext_resource type="PackedScene" uid="uid://bhqil5tcccvew" path="res://Game-Off-2024/Charcaters/Player/weapons/hit_particle.tscn" id="2_gb857"]
+[ext_resource type="PackedScene" uid="uid://b5554hioeef3d" path="res://Game-Off-2024/Charcaters/Player/weapons/muzzle_flash.tscn" id="3_rxuqt"]
+[ext_resource type="Texture2D" uid="uid://bglfxh442t4ic" path="res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png" id="4_m6omj"]
+[ext_resource type="AudioStream" uid="uid://dx4ldchyg56q5" path="res://Game-Off-2024/Assets/Sounds/gun_sound.mp3" id="5_0p7ck"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpewc"]
+atlas = ExtResource("4_m6omj")
+region = Rect2(145, 183, 24, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pccn6"]
+atlas = ExtResource("4_m6omj")
+region = Rect2(49, 3, 24, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3ebx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpewc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pccn6")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_loifk")
+fire_rate = 0.1
+hit_particle = ExtResource("2_gb857")
+muzzle_flash = ExtResource("3_rxuqt")
+
+[node name="gunSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -4)
+sprite_frames = SubResource("SpriteFrames_g3ebx")
+animation = &"shoot"
+autoplay = "idle"
+flip_v = true
+
+[node name="ShotTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="GunSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0p7ck")
+
+[node name="Emission Point" type="Node2D" parent="."]
+position = Vector2(16, -2)
+
+[node name="GunRay" type="RayCast2D" parent="."]
+target_position = Vector2(250, 0)
