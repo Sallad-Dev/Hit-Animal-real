@@ -143,5 +143,5 @@ script = ExtResource("3_18v7l")
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("POI") instance=ExtResource("4_x7kss")]
 position = Vector2(7, -28)
-health = 200
+speed = 1500
 POI = [NodePath("../POIs/POISurvey"), NodePath("../POIs/POISurvey2"), NodePath("../POIs/POISurvey3")]
