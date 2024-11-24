@@ -8,7 +8,7 @@ extends TextureRect
 
 var cursor_index : int = 0
 
-func _process(delta):
+func _process(_delta):
 	var input := Vector2.ZERO
 	
 	if Input.is_action_just_pressed("ui_up"):
@@ -43,9 +43,9 @@ func set_cursor_from_index(index : int) -> void:
 	if menu_item == null:
 		return
 	
-	var position = menu_item.global_position
-	var size = menu_item.size
+	var pos = menu_item.global_position
+	var men_size = menu_item.size
 	
-	global_position = Vector2(position.x, position.y + size.y / 2.0) - (size / 2.0) - cursor_offset
+	global_position = Vector2(pos.x, pos.y + men_size.y / 2.0) - (men_size / 2.0) - cursor_offset
 	
 	cursor_index = index

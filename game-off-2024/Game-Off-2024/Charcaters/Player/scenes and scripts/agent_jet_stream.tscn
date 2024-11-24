@@ -115,7 +115,7 @@ autoplay = "idle"
 
 [node name="Gun" type="Node2D" parent="."]
 script = ExtResource("8_h0ye3")
-fire_rate = 0.1
+fire_rate = 0.05
 hit_particle = ExtResource("7_nhse0")
 muzzle_flash = ExtResource("8_2urbp")
 

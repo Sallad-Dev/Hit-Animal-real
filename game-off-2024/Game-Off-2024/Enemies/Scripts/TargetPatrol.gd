@@ -36,6 +36,6 @@ func on_enemy_dies(enemy):
 		transitioned.emit("Dead")
 
 
-func on_player_sighted(player):
+func on_player_sighted(_player):
 	#owner.last_known_player_pos = player.global_position
 	transitioned.emit("Aware")

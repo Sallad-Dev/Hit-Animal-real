@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cwha4jrrqb4oq"]
 
-[ext_resource type="Texture2D" uid="uid://b508viv3ch7ia" path="res://Images/wing cursor-Sheet.png" id="1_bt3ij"]
+[ext_resource type="Texture2D" uid="uid://b508viv3ch7ia" path="res://Game-Off-2024/UI/Images/wing cursor-Sheet.png" id="1_bt3ij"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_panap"]
 atlas = ExtResource("1_bt3ij")
