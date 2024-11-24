@@ -1,11 +1,2 @@
 res://Game-Off-2024/TestWorlds/test_world_gamers.tscn
-res://Game-Off-2024/UI/menu.tscn
-res://Game-Off-2024/UI/options_menu.tscn
-res://Game-Off-2024/UI/window_mode_button.tscn
-res://Game-Off-2024/UI/UI Scripts/options_menu.tscn
-res://Game-Off-2024/UI/UI Scripts/optionsmenu.gd
-res://Game-Off-2024/UI/UI Scripts/window_mode_button.tscn
-res://Game-Off-2024/UI/UI Scenes/options_menu.tscn
-res://Game-Off-2024/UI/UI Scripts/menu.gd
 res://Game-Off-2024/UI/UI Scenes/menu.tscn
-res://Game-Off-2024/UI/UI Scenes/window_mode_button.tscn
