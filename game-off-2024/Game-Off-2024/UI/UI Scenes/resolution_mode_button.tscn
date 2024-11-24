@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxhfx1lmxc2af"]
+
+[ext_resource type="PackedScene" uid="uid://lpd2dealyvv3" path="res://Game-Off-2024/UI/UI Scenes/options_display_button.tscn" id="1_jindb"]
+
+[node name="Resolution_Mode_Button" instance=ExtResource("1_jindb")]

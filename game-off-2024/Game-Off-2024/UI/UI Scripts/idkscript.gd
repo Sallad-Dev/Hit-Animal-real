@@ -22,7 +22,7 @@ func _on_start_button_pressed() -> void:
 func _on_options_button_pressed() -> void:
 	confirmSound.play()
 	await get_tree().create_timer(1.5).timeout
-	get_tree().change_scene_to_file("res://Game-Off-2024/UI/options_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/options_menu.tscn")
 	
 
 func _on_quit_button_pressed() -> void:
