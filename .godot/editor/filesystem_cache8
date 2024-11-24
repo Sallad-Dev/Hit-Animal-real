@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732413855
-::res://Game-Off-2024/::1732351974
+::res://::1732426821
+::res://Game-Off-2024/::1732426686
 ::res://Game-Off-2024/Assets/::1732351045
 ::res://Game-Off-2024/Assets/Characters/::1732351464
 hit_animal_sprite_sheet_compile.png::CompressedTexture2D::2830606972856865838::1732350397::1732351464::1::::<><>::
@@ -16,15 +16,15 @@ gun_sound.mp3::AudioStreamMP3::8834145770883942218::1732350397::1732351464::1:::
 hit_animal_tile_map.png::CompressedTexture2D::3535650967495413464::1732350397::1732351464::1::::<><>::
 ::res://Game-Off-2024/Charcaters/::1732351428
 ::res://Game-Off-2024/Charcaters/Player/::1732351428
-::res://Game-Off-2024/Charcaters/Player/scenes and scripts/::1732351428
+::res://Game-Off-2024/Charcaters/Player/scenes and scripts/::1732426686
 AgentJetStream.gd::GDScript::-1::1732351428::0::1::::Player<>CharacterBody2D<>::
-agent_jet_stream.tscn::PackedScene::1831098824053578603::1732351428::0::1::::<><>::res://Game-Off-2024/Charcaters/Player/scenes and scripts/AgentJetStream.gd<>uid://cwueym0jpxjme::::res://Game-Off-2024/Assets/player art/jetstreambodysprites.png<>uid://bvotx6ogk5d3t::::res://Game-Off-2024/Assets/player art/cursor.png<>res://Game-Off-2024/Charcaters/Player/scenes and scripts/cursor.gd<>res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerBody.gd<>uid://bhqil5tcccvew::::res://Game-Off-2024/Charcaters/Player/weapons/hit_particle.tscn<>res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerHead.gd<>uid://b5554hioeef3d::::res://Game-Off-2024/Charcaters/Player/weapons/muzzle_flash.tscn<>res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerGun.gd<>uid://bglfxh442t4ic::::res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png<>uid://dx4ldchyg56q5::::res://Game-Off-2024/Assets/Sounds/gun_sound.mp3
+agent_jet_stream.tscn::PackedScene::1831098824053578603::1732426686::0::1::::<><>::res://Game-Off-2024/Charcaters/Player/scenes and scripts/AgentJetStream.gd<>uid://cwueym0jpxjme::::res://Game-Off-2024/Assets/player art/jetstreambodysprites.png<>uid://bvotx6ogk5d3t::::res://Game-Off-2024/Assets/player art/cursor.png<>res://Game-Off-2024/Charcaters/Player/scenes and scripts/cursor.gd<>res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerBody.gd<>uid://bhqil5tcccvew::::res://Game-Off-2024/Charcaters/Player/weapons/hit_particle.tscn<>res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerHead.gd<>uid://b5554hioeef3d::::res://Game-Off-2024/Charcaters/Player/weapons/muzzle_flash.tscn<>res://Game-Off-2024/Charcaters/Player/scenes and scripts/playerGun.gd<>uid://bglfxh442t4ic::::res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png<>uid://dx4ldchyg56q5::::res://Game-Off-2024/Assets/Sounds/gun_sound.mp3
 animated_sprite_2d.gd::GDScript::-1::1732351428::0::1::::<>AnimatedSprite2D<>::
-cursor.gd::GDScript::-1::1732351428::0::1::::<>Sprite2D<>::
+cursor.gd::GDScript::-1::1732426686::0::1::::<>Sprite2D<>::
 hitscan.gd::GDScript::-1::1732351428::0::1::::<>RayCast2D<>::
 JetStreamSprite.gd::GDScript::-1::1732351428::0::1::::<>Sprite2D<>::
 playerBody.gd::GDScript::-1::1732351428::0::1::::<>Node2D<>::
-playerGun.gd::GDScript::-1::1732351428::0::1::::<>Node2D<>::
+playerGun.gd::GDScript::-1::1732426686::0::1::::<>Node2D<>::
 playerHead.gd::GDScript::-1::1732351428::0::1::::<>Node2D<>::
 testLabelTimer.gd::GDScript::-1::1732351428::0::1::::<>Label<>::
 ::res://Game-Off-2024/Charcaters/Player/weapons/::1732351428
@@ -39,7 +39,7 @@ hit_particle.tscn::PackedScene::2911279618044804514::1732351428::0::1::::<><>::r
 muzzle_flash.gd::GDScript::-1::1732351428::0::1::::<>CPUParticles2D<>::
 muzzle_flash.tscn::PackedScene::4555891003925593327::1732351428::0::1::::<><>::uid://c4i2ja4ueomkq::::res://Game-Off-2024/Assets/Characters/MuzzleFlash01-Sheet.png<>res://Game-Off-2024/Charcaters/Player/weapons/muzzle_flash.gd
 ::res://Game-Off-2024/Enemies/::1732350397
-::res://Game-Off-2024/Enemies/Scenes/::1732350563
+::res://Game-Off-2024/Enemies/Scenes/::1732426686
 area_2d.gd::GDScript::-1::1732350397::0::1::::<>Area2D<>::
 basic_enemy_1.tscn::PackedScene::4764611195551309561::1732350563::0::1::::<><>::res://Game-Off-2024/random files/enemy_class.gd<>uid://c5tgk0k26x3b1::::res://Game-Off-2024/Generic_StateMachine/state_machine.tscn<>uid://w02jdn2ikxfd::::res://Game-Off-2024/Enemies/Scenes/enemyIdle.tscn<>res://Game-Off-2024/random files/enemyAware.gd<>res://Game-Off-2024/Enemies/Scripts/enemyAggressive.gd<>res://Game-Off-2024/Enemies/Scripts/enemyInspecting.gd<>uid://bglfxh442t4ic::::res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png<>res://Game-Off-2024/Enemies/Scripts/enemyScared.gd<>uid://dq0k7eyogbqv2::::res://Game-Off-2024/Enemies/Scenes/enemyDead.tscn<>res://Game-Off-2024/Enemies/Scripts/enemyPatrol.gd<>res://Game-Off-2024/Enemies/Scenes/head_sprite.gd<>res://Game-Off-2024/Enemies/Scripts/enemyBodySprite.gd
 enemyDead.tscn::PackedScene::8334557556284816077::1732350397::0::1::::<><>::res://Game-Off-2024/Enemies/Scripts/enemyDead.gd
@@ -48,8 +48,8 @@ enemyRaycasts.gd::GDScript::-1::1732350397::0::1::::<>RayCast2D<>::
 enemy_class.tscn::PackedScene::6795865101782622164::1732350563::0::1::::<><>::res://Game-Off-2024/random files/enemy_class.gd
 head_sprite.gd::GDScript::-1::1732350397::0::1::::<>AnimatedSprite2D<>::
 points_of_interest.tscn::PackedScene::6236510195947355943::1732350397::0::1::::<><>::res://Game-Off-2024/Enemies/Scripts/points_of_interest.gd
-target_enemy.tscn::PackedScene::470786383376089375::1732350563::0::1::::<><>::res://Game-Off-2024/Enemies/Scripts/target_enemy.gd<>uid://bglfxh442t4ic::::res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png<>res://Game-Off-2024/Generic_StateMachine/StateMachine.gd<>res://Game-Off-2024/Enemies/Scenes/enemyRaycasts.gd<>res://Game-Off-2024/Enemies/Scripts/TargetIdle.gd<>res://Game-Off-2024/Enemies/Scripts/TargetPatrol.gd<>res://Game-Off-2024/Enemies/Scripts/TargetPOIArrival.gd<>uid://dq0k7eyogbqv2::::res://Game-Off-2024/Enemies/Scenes/enemyDead.tscn<>res://Game-Off-2024/Enemies/Scenes/area_2d.gd<>uid://dvvopnog574xr::::res://Game-Off-2024/random files/blood_splatter.tscn<>res://Game-Off-2024/random files/enemyAware.gd
-::res://Game-Off-2024/Enemies/Scripts/::1732350397
+target_enemy.tscn::PackedScene::470786383376089375::1732426686::0::1::::<><>::res://Game-Off-2024/Enemies/Scripts/target_enemy.gd<>uid://bglfxh442t4ic::::res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png<>res://Game-Off-2024/Generic_StateMachine/StateMachine.gd<>res://Game-Off-2024/Enemies/Scenes/enemyRaycasts.gd<>res://Game-Off-2024/Enemies/Scripts/TargetIdle.gd<>res://Game-Off-2024/Enemies/Scripts/TargetPatrol.gd<>res://Game-Off-2024/Enemies/Scripts/TargetPOIArrival.gd<>uid://dq0k7eyogbqv2::::res://Game-Off-2024/Enemies/Scenes/enemyDead.tscn<>res://Game-Off-2024/Enemies/Scenes/area_2d.gd<>uid://dvvopnog574xr::::res://Game-Off-2024/random files/blood_splatter.tscn<>res://Game-Off-2024/random files/enemyAware.gd
+::res://Game-Off-2024/Enemies/Scripts/::1732426686
 enemyAggressive.gd::GDScript::-1::1732350397::0::1::::EnemyAggressive<>State<>::
 enemyBodySprite.gd::GDScript::-1::1732350397::0::1::::<>AnimatedSprite2D<>::
 enemyDead.gd::GDScript::-1::1732350397::0::1::::EnemyDead<>State<>::
@@ -61,66 +61,66 @@ POIKillEnemy.gd::GDScript::-1::1732350397::0::1::::POIKillEnemy<>PointOfInterest
 points_of_interest.gd::GDScript::-1::1732350397::0::1::::PointOfInterest<>Node2D<>::
 poiSurvey.gd::GDScript::-1::1732350397::0::1::::POISurvey<>PointOfInterest<>::
 TargetIdle.gd::GDScript::-1::1732350397::0::1::::TargetEnemyIdle<>State<>::
-TargetPatrol.gd::GDScript::-1::1732350397::0::1::::TargetEnemyPatrol<>State<>::
-TargetPOIArrival.gd::GDScript::-1::1732350397::0::1::::POIArrival<>State<>::
-target_enemy.gd::GDScript::-1::1732350397::0::1::::TargetEnemy<>CharacterBody2D<>::
+TargetPatrol.gd::GDScript::-1::1732426686::0::1::::TargetEnemyPatrol<>State<>::
+TargetPOIArrival.gd::GDScript::-1::1732426686::0::1::::POIArrival<>State<>::
+target_enemy.gd::GDScript::-1::1732426686::0::1::::TargetEnemy<>CharacterBody2D<>::
 ::res://Game-Off-2024/exports/::1732350397
 ::res://Game-Off-2024/exports/web export/::1732351464
 index.apple-touch-icon.png::CompressedTexture2D::9142852518803775719::1732350397::1732351464::1::::<><>::
 index.icon.png::CompressedTexture2D::6988829728727393783::1732350397::1732351464::1::::<><>::
 index.png::CompressedTexture2D::8092887010977879046::1732350397::1732351464::1::::<><>::
 ::res://Game-Off-2024/exports/windows export/::1732350398
-::res://Game-Off-2024/Generic_StateMachine/::1732350397
+::res://Game-Off-2024/Generic_StateMachine/::1732426686
 State.gd::GDScript::-1::1732350397::0::1::::State<>Node<>::
-StateMachine.gd::GDScript::-1::1732350397::0::1::::StateMachine<>Node<>::
+StateMachine.gd::GDScript::-1::1732426686::0::1::::StateMachine<>Node<>::
 state_machine.tscn::PackedScene::6918113343550874164::1732350397::0::1::::<><>::res://Game-Off-2024/Generic_StateMachine/StateMachine.gd
 ::res://Game-Off-2024/Globals/::1732350397
 EnemySignals.gd::GDScript::-1::1732350397::0::1::::<>Node<>::
-::res://Game-Off-2024/random files/::1732353974
+::res://Game-Off-2024/random files/::1732426686
 base_level_scene.tscn::PackedScene::1434432780418809117::1732350563::0::1::::<><>::uid://cowwdnd2qn1bd::::res://Game-Off-2024/Assets/player art/hitanimalhead.png
 blood_splatter.gd::GDScript::-1::1732350563::0::1::::<>CPUParticles2D<>::
 blood_splatter.tscn::PackedScene::8677457229865350835::1732350563::0::1::::<><>::uid://bglfxh442t4ic::::res://Game-Off-2024/Assets/Characters/hit_animal_sprite_sheet_compile.png<>res://Game-Off-2024/random files/blood_splatter.gd
 CONTRIBUTING.md::TextFile::-1::1732350563::0::1::::<><>::
-default_bus_layout.tres::AudioBusLayout::1537214007272829295::1732353974::0::1::::<><>::
-enemyAware.gd::GDScript::-1::1732350563::0::1::::EnemyAware<>State<>::
+default_bus_layout.tres::AudioBusLayout::1537214007272829295::1732426686::0::1::::<><>::
+enemyAware.gd::GDScript::-1::1732426686::0::1::::EnemyAware<>State<>::
 enemy_class.gd::GDScript::-1::1732350563::0::1::::EnemyClass<>CharacterBody2D<>::
 export_presets.cfg::TextFile::-1::1732350563::0::1::::<><>::
 icon.svg::CompressedTexture2D::4937364793488972027::1732350563::1732351464::1::::<><>::
 README.md::TextFile::-1::1732350563::0::1::::<><>::
 READMECN.md::TextFile::-1::1732350563::0::1::::<><>::
 test_node_for_gamers.tscn::PackedScene::4942830994426666107::1732350563::0::1::::<><>::
-::res://Game-Off-2024/TestWorlds/::1732413796
+::res://Game-Off-2024/TestWorlds/::1732426686
 path_follow_2d.gd::GDScript::-1::1732350397::0::1::::<>PathFollow2D<>::
 random_world.tscn::PackedScene::8610174832915496366::1732350397::0::1::::<><>::uid://1c86vg4ft60v::::res://Game-Off-2024/Charcaters/Player/scenes and scripts/agent_jet_stream.tscn
 static_body_2d.gd::GDScript::-1::1732350397::0::1::::<>StaticBody2D<>::
-test_world_gamers.tscn::PackedScene::5497576702134263866::1732413796::0::1::::<><>::uid://1c86vg4ft60v::::res://Game-Off-2024/Charcaters/Player/scenes and scripts/agent_jet_stream.tscn<>res://Game-Off-2024/Enemies/Scripts/poiSurvey.gd<>uid://gyb1vdehh0j8::::res://Game-Off-2024/Enemies/Scenes/target_enemy.tscn<>uid://bqmxwja817poa::::res://Game-Off-2024/Assets/Tilesets/hit_animal_tile_map.png
-::res://Game-Off-2024/UI/::1732413922
-::res://Game-Off-2024/UI/Images/::1732413790
-bullet cursor.png::CompressedTexture2D::5641106937326655052::1731898446::1732352104::1::::<><>::
-DEV title.png::CompressedTexture2D::1596186822093775580::1732251352::1732352104::1::::<><>::
-HITANIMAL menu icon.png::CompressedTexture2D::4256622247351930247::1732244974::1732352104::1::::<><>::
-menu background hitanimal.png::CompressedTexture2D::347684982524980715::1732413784::1732413790::1::::<><>::
-second menu background hitanimal.png::CompressedTexture2D::3295007431475710786::1732250105::1732352001::1::::<><>::
-wing cursor-Sheet.png::CompressedTexture2D::4545737053021733928::1732264403::1732352104::1::::<><>::
-wing cursor.png::CompressedTexture2D::2342945405579397387::1732236337::1732352104::1::::<><>::
-::res://Game-Off-2024/UI/Sounds/::1732352216
-bgmusic.mp3::AudioStreamMP3::2344629334365937483::1732263507::1732352216::1::::<><>::
-cursorsound.mp3::AudioStreamMP3::3492595786881425158::1732259654::1732352216::1::::<><>::
-explosive-glass-shattering-09-190267.mp3::AudioStreamMP3::4232093599592887310::1732332351::1732352216::1::::<><>::
-meaty-gunshot-101257.mp3::AudioStreamMP3::2674454035500909132::1732263772::1732352216::1::::<><>::
-::res://Game-Off-2024/UI/UI Scenes/::1732413922
-::res://Game-Off-2024/UI/UI Scripts/::1732413855
-animated_cursor.gd::GDScript::-1::1732267714::0::1::::<>AnimatedSprite2D<>::
-idkscript.gd::GDScript::-1::1732368979::0::1::::<>Control<>::
-menu.gd::GDScript::-1::1732355416::0::1::::<>Control<>::
-menu.tscn::PackedScene::6815131063125657947::1732413855::0::1::::<><>::res://Game-Off-2024/UI/UI Scripts/menu.gd<>uid://bm7ej5ncexoic::::res://Game-Off-2024/UI/Images/second menu background hitanimal.png<>uid://b1v67gf1goci6::::res://Game-Off-2024/UI/Images/HITANIMAL menu icon.png<>uid://8m676u04h7c6::::res://Game-Off-2024/UI/Images/wing cursor.png<>res://Game-Off-2024/UI/UI Scripts/menu_cursor.gd<>uid://bedr4qrkcxqqu::::res://Game-Off-2024/UI/Sounds/meaty-gunshot-101257.mp3<>uid://w0g71dni4es7::::res://Game-Off-2024/UI/Images/DEV title.png<>uid://8n0x5gkechmh::::res://Game-Off-2024/UI/Sounds/bgmusic.mp3<>uid://b1kb70sku8kvu::::res://Game-Off-2024/UI/Sounds/explosive-glass-shattering-09-190267.mp3
-menucursoranim.tscn::PackedScene::6331498859490258248::1732351867::0::1::::<><>::uid://b508viv3ch7ia::::res://Images/wing cursor-Sheet.png
-menu_cursor.gd::GDScript::-1::1732267898::0::1::::<>TextureRect<>::
-menu_cursor.tscn::PackedScene::7958967210231223489::1732351867::0::1::::<><>::uid://8m676u04h7c6::::res://Images/wing cursor.png<>res://Assets/menu_cursor.gd
-optionsmenu.gd::GDScript::-1::1732413938::0::1::::<>Control<>::
-options_display_button.tscn::PackedScene::803273477507920554::1732412385::0::1::::<><>::
-options_menu.tscn::PackedScene::6857424826050537124::1732413938::0::1::::<><>::res://Game-Off-2024/UI/UI Scripts/optionsmenu.gd<>uid://bm7ej5ncexoic::::res://Game-Off-2024/UI/Images/second menu background hitanimal.png<>uid://8n0x5gkechmh::::res://Game-Off-2024/UI/Sounds/bgmusic.mp3<>res://Game-Off-2024/UI/UI Scripts/volume.gd<>uid://cmmuhbne1j56o::::res://Game-Off-2024/UI/Images/bullet cursor.png<>uid://8m676u04h7c6::::res://Game-Off-2024/UI/Images/wing cursor.png<>res://Game-Off-2024/UI/UI Scripts/menu_cursor.gd<>uid://bedr4qrkcxqqu::::res://Game-Off-2024/UI/Sounds/meaty-gunshot-101257.mp3<>uid://b1kb70sku8kvu::::res://Game-Off-2024/UI/Sounds/explosive-glass-shattering-09-190267.mp3<>uid://t6nyogjyt60j::::res://Game-Off-2024/UI/UI Scripts/window_mode_button.tscn
-resolution.gd::GDScript::-1::1732412831::0::1::::<>Control<>::
-resolution_mode_button.tscn::PackedScene::8788402140432134321::1732413855::0::1::::<><>::uid://lpd2dealyvv3::::res://Game-Off-2024/UI/UI Scripts/options_display_button.tscn
-volume.gd::GDScript::-1::1732351867::0::1::::<>HSlider<>::
-window_mode_button.tscn::PackedScene::1398416664495652751::1732413938::0::1::::<><>::uid://lpd2dealyvv3::::res://Game-Off-2024/UI/UI Scripts/options_display_button.tscn<>res://Game-Off-2024/UI/UI Scripts/resolution.gd
+test_world_gamers.tscn::PackedScene::5497576702134263866::1732426686::0::1::::<><>::uid://1c86vg4ft60v::::res://Game-Off-2024/Charcaters/Player/scenes and scripts/agent_jet_stream.tscn<>res://Game-Off-2024/Enemies/Scripts/poiSurvey.gd<>uid://gyb1vdehh0j8::::res://Game-Off-2024/Enemies/Scenes/target_enemy.tscn<>uid://bqmxwja817poa::::res://Game-Off-2024/Assets/Tilesets/hit_animal_tile_map.png
+::res://Game-Off-2024/UI/::1732426686
+::res://Game-Off-2024/UI/Images/::1732426758
+bullet cursor.png::CompressedTexture2D::5641106937326655052::1732426686::1732426758::1::::<><>::
+DEV title.png::CompressedTexture2D::1596186822093775580::1732426686::1732426758::1::::<><>::
+HITANIMAL menu icon.png::CompressedTexture2D::4256622247351930247::1732426686::1732426758::1::::<><>::
+menu background hitanimal.png::CompressedTexture2D::347684982524980715::1732426686::1732426758::1::::<><>::
+second menu background hitanimal.png::CompressedTexture2D::3295007431475710786::1732426686::1732426758::1::::<><>::
+wing cursor-Sheet.png::CompressedTexture2D::4545737053021733928::1732426686::1732426758::1::::<><>::
+wing cursor.png::CompressedTexture2D::2342945405579397387::1732426686::1732426758::1::::<><>::
+::res://Game-Off-2024/UI/Sounds/::1732426758
+bgmusic.mp3::AudioStreamMP3::2344629334365937483::1732426686::1732426758::1::::<><>::
+cursorsound.mp3::AudioStreamMP3::3492595786881425158::1732426686::1732426758::1::::<><>::
+explosive-glass-shattering-09-190267.mp3::AudioStreamMP3::4232093599592887310::1732426686::1732426758::1::::<><>::
+meaty-gunshot-101257.mp3::AudioStreamMP3::2674454035500909132::1732426686::1732426758::1::::<><>::
+::res://Game-Off-2024/UI/UI Scenes/::1732426686
+menu.tscn::PackedScene::6815131063125657947::1732426686::0::1::::<><>::res://Game-Off-2024/UI/UI Scripts/menu.gd<>uid://bm7ej5ncexoic::::res://Game-Off-2024/UI/Images/second menu background hitanimal.png<>uid://b1v67gf1goci6::::res://Game-Off-2024/UI/Images/HITANIMAL menu icon.png<>uid://8m676u04h7c6::::res://Game-Off-2024/UI/Images/wing cursor.png<>res://Game-Off-2024/UI/UI Scripts/menu_cursor.gd<>uid://bedr4qrkcxqqu::::res://Game-Off-2024/UI/Sounds/meaty-gunshot-101257.mp3<>uid://w0g71dni4es7::::res://Game-Off-2024/UI/Images/DEV title.png<>uid://8n0x5gkechmh::::res://Game-Off-2024/UI/Sounds/bgmusic.mp3<>uid://b1kb70sku8kvu::::res://Game-Off-2024/UI/Sounds/explosive-glass-shattering-09-190267.mp3
+menucursoranim.tscn::PackedScene::6331498859490258248::1732426686::0::1::::<><>::uid://b508viv3ch7ia::::res://Images/wing cursor-Sheet.png
+menu_cursor.tscn::PackedScene::7958967210231223489::1732426686::0::1::::<><>::uid://8m676u04h7c6::::res://Images/wing cursor.png<>res://Assets/menu_cursor.gd
+options_display_button.tscn::PackedScene::803273477507920554::1732426686::0::1::::<><>::
+options_menu.tscn::PackedScene::6857424826050537124::1732426686::0::1::::<><>::res://Game-Off-2024/UI/UI Scripts/optionsmenu.gd<>uid://bm7ej5ncexoic::::res://Game-Off-2024/UI/Images/second menu background hitanimal.png<>uid://8n0x5gkechmh::::res://Game-Off-2024/UI/Sounds/bgmusic.mp3<>res://Game-Off-2024/UI/UI Scripts/volume.gd<>uid://cmmuhbne1j56o::::res://Game-Off-2024/UI/Images/bullet cursor.png<>uid://8m676u04h7c6::::res://Game-Off-2024/UI/Images/wing cursor.png<>res://Game-Off-2024/UI/UI Scripts/menu_cursor.gd<>uid://bedr4qrkcxqqu::::res://Game-Off-2024/UI/Sounds/meaty-gunshot-101257.mp3<>uid://b1kb70sku8kvu::::res://Game-Off-2024/UI/Sounds/explosive-glass-shattering-09-190267.mp3<>uid://t6nyogjyt60j::::res://Game-Off-2024/UI/UI Scenes/window_mode_button.tscn
+resolution_mode_button.tscn::PackedScene::8788402140432134321::1732426686::0::1::::<><>::uid://lpd2dealyvv3::::res://Game-Off-2024/UI/UI Scenes/options_display_button.tscn
+window_mode_button.tscn::PackedScene::1398416664495652751::1732426686::0::1::::<><>::uid://lpd2dealyvv3::::res://Game-Off-2024/UI/UI Scenes/options_display_button.tscn<>res://Game-Off-2024/UI/UI Scripts/resolution.gd
+::res://Game-Off-2024/UI/UI Scripts/::1732426770
+animated_cursor.gd::GDScript::-1::1732426686::0::1::::<>AnimatedSprite2D<>::
+idkscript.gd::GDScript::-1::1732426686::0::1::::<>Control<>::
+menu.gd::GDScript::-1::1732426770::0::1::::<>Control<>::
+menu_cursor.gd::GDScript::-1::1732426770::0::1::::<>TextureRect<>::
+optionsmenu.gd::GDScript::-1::1732426770::0::1::::<>Control<>::
+resolution.gd::GDScript::-1::1732426770::0::1::::<>Control<>::
+volume.gd::GDScript::-1::1732426686::0::1::::<>HSlider<>::
