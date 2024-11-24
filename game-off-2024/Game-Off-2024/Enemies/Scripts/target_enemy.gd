@@ -56,6 +56,9 @@ func poi_survey():
 	EnemySignals.enemyArrivalFinsihed.emit(self)
 
 
+func reset_head_sprite():
+	head_sprite.rotation_degrees = 0
+
 # POI setters and getters
 func get_poi_list():
 	return poi_list

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc4fvsij7e8d2"]
+
+[ext_resource type="Script" path="res://Game-Off-2024/Globals/MusicManager.gd" id="1_vrmks"]
+[ext_resource type="AudioStream" uid="uid://8n0x5gkechmh" path="res://Game-Off-2024/UI/Sounds/bgmusic.mp3" id="2_lw5b6"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_vrmks")
+
+[node name="Bgmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_lw5b6")
+volume_db = -14.0
+autoplay = true
+bus = &"Music"

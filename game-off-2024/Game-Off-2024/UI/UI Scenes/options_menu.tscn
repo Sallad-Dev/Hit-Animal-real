@@ -1,8 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://c4x11xp0ovw4k"]
+[gd_scene load_steps=19 format=3 uid="uid://c4x11xp0ovw4k"]
 
 [ext_resource type="Script" path="res://Game-Off-2024/UI/UI Scripts/optionsmenu.gd" id="1_v5dkl"]
 [ext_resource type="Texture2D" uid="uid://bm7ej5ncexoic" path="res://Game-Off-2024/UI/Images/second menu background hitanimal.png" id="2_5p42f"]
-[ext_resource type="AudioStream" uid="uid://8n0x5gkechmh" path="res://Game-Off-2024/UI/Sounds/bgmusic.mp3" id="3_e6edi"]
 [ext_resource type="Script" path="res://Game-Off-2024/UI/UI Scripts/volume.gd" id="4_iegn8"]
 [ext_resource type="Texture2D" uid="uid://cmmuhbne1j56o" path="res://Game-Off-2024/UI/Images/bullet cursor.png" id="4_nup0w"]
 [ext_resource type="Texture2D" uid="uid://8m676u04h7c6" path="res://Game-Off-2024/UI/Images/wing cursor.png" id="6_h02ee"]
@@ -124,13 +123,6 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_bd0pk")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_bd0pk")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_bd0pk")
 text = "Back"
-
-[node name="BGM" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_e6edi")
-volume_db = -5.924
-autoplay = true
-bus = &"Music"
-parameters/looping = true
 
 [node name="menu_cursor" type="TextureRect" parent="."]
 layout_mode = 0

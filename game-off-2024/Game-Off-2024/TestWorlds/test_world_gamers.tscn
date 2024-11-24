@@ -114,7 +114,7 @@ sources/0 = SubResource("TileSetAtlasSource_r7lrg")
 [node name="Test World Gamers" type="Node"]
 
 [node name="AgentJetStream" parent="." instance=ExtResource("2_f23it")]
-position = Vector2(274, 100)
+position = Vector2(52, 50)
 
 [node name="Floors" type="TileMapLayer" parent="."]
 z_index = -4096

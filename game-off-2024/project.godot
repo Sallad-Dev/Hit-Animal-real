@@ -22,7 +22,7 @@ buses/default_bus_layout="res://Game-Off-2024/random files/default_bus_layout.tr
 [autoload]
 
 EnemySignals="*res://Game-Off-2024/Globals/EnemySignals.gd"
-MusicManager="*res://Game-Off-2024/Globals/MusicManager.gd"
+MusicManager="*res://Game-Off-2024/Globals/MusicManager.tscn"
 
 [display]
 
